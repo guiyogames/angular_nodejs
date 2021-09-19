@@ -1,0 +1,40 @@
+<h2>Contacto</h2>
+
+<form #formContacto="ngForm" (ngSubmit)="onSubmit()">
+    <label for="nombre">Nombre:</label>
+    <br>
+    <input type="text" name="name" #nombre ="ngModel" [(ngModel)] ="usuario.nombre" 
+    required pattern ="[a-zA-Z]+">
+    <!--usamos required pattern ("[a-zA-Z]+" expresión regular) para que salte el error usando números-->
+    <!--para validar con *ngIf capturamos el name (nombre) nombre.touched (salir del campo) y !nombre.valid (validar)-->
+    <span *ngIf="nombre.touched && !nombre.valid"> 
+    <p>El nombre es obligatorio</p>
+    </span>
+    <br>
+    <label for="apellido">Apellido:</label>
+    <br>
+    <input type="text" name="apellido" #apellido ="ngModel" [(ngModel)] ="usuario.apellido" 
+    required pattern ="[a-zA-Z]+">
+    <span *ngIf="apellido.touched && !apellido.valid"> 
+       <p>El apellido es obligatorio</p> 
+        </span>
+        <br>
+    <label for="email">Email:</label>
+    <br>
+    <input type="email" name="email" #email ="ngModel" [(ngModel)] ="usuario.email" 
+    required>
+    <span *ngIf="email.touched && !email.valid"> 
+        <p>El Email no es válido</p>
+        </span>
+        <br>
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea name="mensaje" #mensaje ="ngModel" [(ngModel)] ="usuario.mensaje"
+    required>  </textarea>
+    <span *ngIf="mensaje.touched && !mensaje.valid"> 
+       <p> El mensaje es obligatorio</p>
+    </span>
+        <br>  
+        <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid">
+       <br>
+<!--El envió del formulario se hace cuando están todos los campos completos  [disabled]="!formContacto.form.valid" -->
+</form>

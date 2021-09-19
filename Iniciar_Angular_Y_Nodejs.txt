@@ -1,0 +1,11 @@
+INICIAR ANGULAR:
+
+Vamos a la carpeta angular donde está el proyecto
+
+escribimos el comando ng serve (esperamos que cargue la petición)
+
+INCIAR NODE JS 
+
+Vamos a la carpeta donde está nuestro backend 
+
+escribimos el comando node server (esperamos que cargue la petición)

@@ -1,0 +1,8 @@
+Crear archivo directo desde consola de comandos. 
+
+ng g c components/nombre
+
+ng g server servicio/nombre
+
+(ng) generate component (elegimos carpeta component) y nombre del component (zapatillas.component)
+con servicios usamos el mismo método.

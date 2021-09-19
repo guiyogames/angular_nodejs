@@ -1,0 +1,13 @@
+<div class="main-container"> <!--Lista de productos-->
+<!--recorremos con el *ngFor los item de items y visualisamos en el doom (app.component.html)-->
+ 
+<app-total mensaje="Total por pagar: "[total]="total"></app-total> <!--capturamos a total y vemos el valor en el doom-->
+ <app-item 
+ *ngFor="let item of items"
+ [item]="item"
+ (deleteItem)="deleteItem($event)"
+ (toggleItem)="toggleItem($event)"></app-item>
+<!--llamamos a estas funciones desde items.component.ts-->
+ </div>
+
+

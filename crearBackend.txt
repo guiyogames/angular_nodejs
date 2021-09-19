@@ -1,0 +1,15 @@
+
+Configurar backend para hacer la petición HTTP
+
+1) Creamos el archivo server.js y data.json (se copia y pega código),
+lo guardamos en la carpeta backend.
+
+2) Vamos a la consola Cygwin64 entramos a la carpeta que hemos creado (backend).
+y escribimos el comando npm init -y, nos va a generar una configuración (pack json).
+
+3) Escribimos el comando npm i express cors uuid (nos crea librerías)
+
+4) Escribimos node server (levanta el servidor) 
+
+ 
+

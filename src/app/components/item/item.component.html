@@ -1,0 +1,37 @@
+<div class="row" [ngClass]="{'completed':item.completed}">
+  <!--{'completed':item.completed} para que salga el item tachado-->
+
+  <input type="checkbox" [checked]="item.completed"(change)="onToggle(item)">
+<!--botón de check del item (producto)--> <!--Con (change)="onToggle(item) no tacha el item">-->
+<div class="title">
+
+{{item.title}}
+
+</div>
+
+
+<div class="price">
+<!--usamos | currency para hacer el signo $ en el doom-->
+{{item.price | currency}}
+    
+</div>
+    
+<div class="quantity">
+
+ {{item.quantity }}
+        
+  </div>
+
+  <div class="total">
+<!--entre llaves y parentesis podemos programar operaciones-->
+    {{(item.price * item.quantity)| currency}}
+           
+     </div>
+<!--llamamos a la funcion onDelete con el método (click) form item.compenent.ts-->
+
+    <div class="actions">
+      <button (click)="onDelete(item)">Eliminar</button>
+    </div>
+ 
+
+</div>

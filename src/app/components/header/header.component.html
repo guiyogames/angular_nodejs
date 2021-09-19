@@ -1,0 +1,34 @@
+<!--Encabezado-->
+<!--Pipes-->
+<!--Capuramos la fecha y con | (barra vertical) date la hacemos mas legible-->
+ <!--{{fecha | date:'fullDate'}}--> 
+ {{'hoy es:' |lowercase}}
+ {{fecha | date:'dd/MM/yyyy' }}<br/>
+<!--lowercase letra pequeña-->
+ <!-- {{fecha | date:'fullDate' | lowercase}}<br/>-->
+ <br/>
+ {{'calculadora básica hecha con pipes: ' |lowercase}}<!--uppercase letra grande-->
+ <!--Capturamos el pipe desde name:'calculadora'que viene desde calculadora.pipe.ts-->
+ {{5 | calculator: 4 }} 
+
+<hr/>
+
+<menu>
+
+<ul>
+
+<!--Etiqueta que hace posible el pase de una página a otra-->
+    
+  <li><a routerLink="/">Home</a></li>
+   
+  <li><a routerLink="/add">Nuevo</a></li> 
+
+  <li><a routerLink="/contacto">Contacto</a></li>
+
+  <li><a routerLink="/externo">Externo</a></li>
+
+
+</ul>
+
+
+</menu>
